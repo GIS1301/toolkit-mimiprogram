@@ -1,0 +1,58 @@
+<view class="el-form demo-form-inline yf-box" id="yfForm">
+    <view>
+        <view>坐标A</view>
+    </view>
+    <view class="el-form-item">
+        <label class="el-form-item__label">经度</label>
+        <view class="el-form-item__content">
+            <view class="el-input">
+                <input type="number" data-key="lonA" autocomplete="off" class="el-input__inner" value='{{lonA}}' bindinput="changeInput" />
+            </view>
+        </view>
+    </view>
+    <view class="el-form-item">
+        <label class="el-form-item__label">纬度</label>
+        <view class="el-form-item__content">
+            <view class="el-input">
+                <input type="number" data-key="latA" autocomplete="off" class="el-input__inner" value='{{latA}}' bindinput="changeInput" />
+            </view>
+        </view>
+    </view>
+    <view>
+        <view>坐标B</view>
+    </view>
+    <view class="el-form-item">
+        <label class="el-form-item__label">经度</label>
+        <view class="el-form-item__content">
+            <view class="el-input">
+                <input type="number" data-key="lonB" autocomplete="off" class="el-input__inner" value='{{lonB}}' bindinput="changeInput" />
+            </view>
+        </view>
+    </view>
+    <view class="el-form-item">
+        <label class="el-form-item__label">纬度</label>
+        <view class="el-form-item__content">
+            <view class="el-input">
+                <input type="number" data-key="latB" autocomplete="off" class="el-input__inner" value='{{latB}}' bindinput="changeInput" />
+            </view>
+        </view>
+    </view>
+    <view class="el-form-item">
+        <button type="button" id="calcBtn" class="el-button el-button--primary" bindtap='calcDisAndAngle'>
+            <text>计算</text>
+        </button>
+        <button type="button" id="resetBtn" class="el-button el-button--primary" bindtap='resetCalcResult'>
+            <text>重置</text>
+        </button>
+    </view>
+    <view class="box-panel">
+        <text class="text--h5">
+            注：此处的方位角是B相对于A的角度
+        </text>
+        <label for="">方位角（度）：</label>
+        <text id="anglePanel">{{angle}}</text>
+        <view></view>
+        <label for="">距离（米）：</label>
+        <text id="disPanel">{{dis}}</text>
+    </view>
+</view>

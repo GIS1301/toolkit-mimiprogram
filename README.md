@@ -1,2 +1,2 @@
-# toolkit-mimiprogram
-toolkit-mimiprogram
+# toolkit-miniprogram
+toolkit-miniprogram
