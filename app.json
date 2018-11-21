@@ -1,11 +1,28 @@
 {
-  "pages":[
-    "pages/index/index"
-  ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
-  }
+    "pages": [
+        "pages/index/index",
+        "pages/map/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "GIS-toolkit",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath":"static/images/home.png",
+                "selectedIconPath":"static/images/s-home.png"
+            },
+            {
+                "pagePath": "pages/map/index",
+                "text": "地图",
+                "iconPath": "static/images/nav.png",
+                "selectedIconPath": "static/images/s-nav.png"
+            }
+        ]
+    }
 }

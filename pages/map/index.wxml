@@ -1,0 +1,4 @@
+<map id="yanMap" 
+    class="yan--map"
+    polyline="{{polyline}}"
+    show-compass="true"></map>

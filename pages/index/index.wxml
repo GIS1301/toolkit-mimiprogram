@@ -38,12 +38,8 @@
         </view>
     </view>
     <view class="el-form-item">
-        <button type="button" id="calcBtn" class="el-button el-button--primary" bindtap='calcDisAndAngle'>
-            <text>计算</text>
-        </button>
-        <button type="button" id="resetBtn" class="el-button el-button--primary" bindtap='resetCalcResult'>
-            <text>重置</text>
-        </button>
+        <button class="btn" type="primary" id="calcBtn" bindtap='calcDisAndAngle'>计算</button>
+        <button class="btn" type="default" id="resetBtn" bindtap='resetCalcResult'>重置</button>
     </view>
     <view class="box-panel">
         <text class="text--h5">

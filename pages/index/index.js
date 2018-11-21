@@ -14,7 +14,7 @@ Page({
         dis: 0,
     },
     //事件处理函数
-    calcDisAndAngle: function() {
+    calcDisAndAngle() {
         let {
             lonA,
             latA,
@@ -38,8 +38,6 @@ Page({
                 content: '无效输入',
                 showCancel: false,
             });
-
-
         }
         let angle = Tool.getAngleBetweenTwoPoints(lonA, latA, lonB, latB);
         let dis = Tool.getDistanceBetweenTwoPoints(lonA, latA, lonB, latB);
@@ -48,7 +46,7 @@ Page({
             dis,
         });
     },
-    resetCalcResult: function() {
+    resetCalcResult() {
         this.setData({
             lonA: 0,
             latA: 0,
@@ -58,7 +56,7 @@ Page({
             dis: 0,
         });
     },
-    changeInput: function({
+    changeInput({
         detail,
         target
     }) {
@@ -72,10 +70,26 @@ Page({
             [key]: value,
         });
     },
-    isNumber: function(val) {
+    isNumber(val) {
         return +val == val;
     },
-    onLoad: function() {
+    onLoad() {
 
     },
+    onHide() {
+        // 传递数据
+        wx.setStorage({
+            key: "yan-pos",
+            data: [
+                {
+                    latitude:this.data.latA,
+                    longitude:this.data.lonA
+                },
+                {
+                    latitude: this.data.latB,
+                    longitude: this.data.lonB
+                }
+            ]
+        })
+    }
 })

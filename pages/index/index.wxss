@@ -12,7 +12,7 @@
 .el-form-item__content {
     line-height: 80rpx;
     position: relative;
-    font-size: 28rpx
+    font-size: 28rpx;
 }
 
 .el-form-item__content::after,.el-form-item__content::before {
@@ -38,6 +38,10 @@
 
 .el-form-item::after {
     clear: both
+}
+
+.el-form-item .btn{
+    margin:10px;
 }
 
 .el-button,.el-checkbox {
