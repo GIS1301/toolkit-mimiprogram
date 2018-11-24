@@ -1,54 +1,25 @@
-<view class="el-form demo-form-inline yf-box" id="yfForm">
-    <view>
-        <view>坐标A</view>
+<view class='app'>
+    <view class="app-con">
+        <h3 class="con-title">坐标A</h3>
+        <gis-input prop-type="lon" prop-deg="{{lonA}}" data-key="lonA" bind:set-coords="setCoords" />
+        <gis-input prop-type="lat" prop-deg="{{latA}}" data-key="latA" bind:set-coords="setCoords" />
+        <h3 class="con-title">坐标B</h3>
+        <gis-input prop-type="lon" prop-deg="{{lonB}}" data-key="lonB" bind:set-coords="setCoords" />
+        <gis-input prop-type="lat" prop-deg="{{latB}}" data-key="latB" bind:set-coords="setCoords" />
     </view>
-    <view class="el-form-item">
-        <label class="el-form-item__label">经度</label>
-        <view class="el-form-item__content">
-            <view class="el-input">
-                <input type="number" data-key="lonA" autocomplete="off" class="el-input__inner" value='{{lonA}}' bindinput="changeInput" />
-            </view>
+    <view class="app-btns">
+        <button class="btn primary" bindtap='calcDisAndAngle'>计算</button>
+        <button class="btn" bindtap='resetCalcResult'>重置</button>
+    </view>
+    <view class="app-panel" wx:if="{{isShowResult}}">
+        <view class="tip">长按复制</view>
+        <view class="panel">
+            <label>距离：</label>
+            <text bindlongtap="copy2ClipBoard" data-copy="{{dis}}">{{dis}}m</text>
         </view>
-    </view>
-    <view class="el-form-item">
-        <label class="el-form-item__label">纬度</label>
-        <view class="el-form-item__content">
-            <view class="el-input">
-                <input type="number" data-key="latA" autocomplete="off" class="el-input__inner" value='{{latA}}' bindinput="changeInput" />
-            </view>
+        <view class="panel">
+            <label>方位角：</label>
+            <text bindlongtap="copy2ClipBoard" data-copy="{{copyAngle}}">{{uiAngle}}</text>
         </view>
-    </view>
-    <view>
-        <view>坐标B</view>
-    </view>
-    <view class="el-form-item">
-        <label class="el-form-item__label">经度</label>
-        <view class="el-form-item__content">
-            <view class="el-input">
-                <input type="number" data-key="lonB" autocomplete="off" class="el-input__inner" value='{{lonB}}' bindinput="changeInput" />
-            </view>
-        </view>
-    </view>
-    <view class="el-form-item">
-        <label class="el-form-item__label">纬度</label>
-        <view class="el-form-item__content">
-            <view class="el-input">
-                <input type="number" data-key="latB" autocomplete="off" class="el-input__inner" value='{{latB}}' bindinput="changeInput" />
-            </view>
-        </view>
-    </view>
-    <view class="el-form-item">
-        <button class="btn" type="primary" id="calcBtn" bindtap='calcDisAndAngle'>计算</button>
-        <button class="btn" type="default" id="resetBtn" bindtap='resetCalcResult'>重置</button>
-    </view>
-    <view class="box-panel">
-        <text class="text--h5">
-            注：此处的方位角是B相对于A的角度
-        </text>
-        <label for="">方位角（度）：</label>
-        <text id="anglePanel">{{angle}}</text>
-        <view></view>
-        <label for="">距离（米）：</label>
-        <text id="disPanel">{{dis}}</text>
     </view>
 </view>

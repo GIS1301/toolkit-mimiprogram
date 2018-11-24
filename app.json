@@ -5,9 +5,9 @@
     ],
     "window": {
         "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "GIS-toolkit",
-        "navigationBarTextStyle": "black"
+        "navigationBarBackgroundColor": "#0041d1",
+        "navigationBarTitleText": "GIS工具助手",
+        "navigationBarTextStyle": "#fff"
     },
     "tabBar": {
         "list": [

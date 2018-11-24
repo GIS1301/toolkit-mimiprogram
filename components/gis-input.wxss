@@ -1,0 +1,18 @@
+.con-input{
+    margin:30rpx 0;
+}
+.label--tilte{
+    font-size: 16px;
+    color:rgb(41, 35, 35);
+}
+.input--num{
+    display: inline-block;
+    width:15vw;
+    margin:0 15rpx;
+    border-bottom:1rpx solid #ccc;
+    text-align: center;                                                     
+}
+.label--txt{
+    margin:0 2vw;
+    color:#ccc;
+}

@@ -1,0 +1,9 @@
+<view class="con-input">
+    <label class="label--tilte">{{labelText}}</label>
+    <input type="number" class="input--num" value="{{deg}}" data-type="deg" bindinput="changeVal" bindblur='postMsgToParent' />
+    <label class="label--txt">°</label>
+    <input type="number" class="input--num" value="{{min}}" data-type="min" bindinput="changeVal" bindblur='postMsgToParent' />
+    <label class="label--txt">'</label>
+    <input type="number" class="input--num" value="{{sec}}" data-type="sec" bindinput="changeVal" bindblur='postMsgToParent' />
+    <label class="label--txt">''</label>
+</view>
