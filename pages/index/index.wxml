@@ -1,25 +1,9 @@
-<view class='app'>
-    <view class="app-con">
-        <h3 class="con-title">坐标A</h3>
-        <gis-input prop-type="lon" prop-deg="{{lonA}}" data-key="lonA" bind:set-coords="setCoords" />
-        <gis-input prop-type="lat" prop-deg="{{latA}}" data-key="latA" bind:set-coords="setCoords" />
-        <h3 class="con-title">坐标B</h3>
-        <gis-input prop-type="lon" prop-deg="{{lonB}}" data-key="lonB" bind:set-coords="setCoords" />
-        <gis-input prop-type="lat" prop-deg="{{latB}}" data-key="latB" bind:set-coords="setCoords" />
+<view class="app">
+    <view class="app-title">GIS工具助手，提高工作效率</view>
+    <view class="app-con card">
+        <navigator class="nav" url="/pages/distance/index">已知A、B点坐标，计算距离和方位角</navigator>
     </view>
-    <view class="app-btns">
-        <button class="btn primary" bindtap='calcDisAndAngle'>计算</button>
-        <button class="btn" bindtap='resetCalcResult'>重置</button>
-    </view>
-    <view class="app-panel" wx:if="{{isShowResult}}">
-        <view class="tip">长按复制</view>
-        <view class="panel">
-            <label>距离：</label>
-            <text bindlongtap="copy2ClipBoard" data-copy="{{dis}}">{{dis}}m</text>
-        </view>
-        <view class="panel">
-            <label>方位角：</label>
-            <text bindlongtap="copy2ClipBoard" data-copy="{{copyAngle}}">{{uiAngle}}</text>
-        </view>
+     <view class="app-con card">
+        <text class="nav disable">已知A点坐标，距离和方位角，求B点坐标</text>
     </view>
 </view>

@@ -1,4 +1,8 @@
 /**app.wxss**/
+page{
+    background-color: rgba(231, 231, 231, 0.952);
+    height: 100%;
+}
 .container {
   height: 100%;
   display: flex;
@@ -8,3 +12,41 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+.card{
+    margin:20rpx 0;
+    padding: 10rpx 15rpx;
+    background-color: #fff;
+    border-radius: 5rpx;
+}
+
+.app {
+    padding: 15rpx 20rpx;
+}
+.app-title{
+    font-size: 30rpx;
+    text-align: center;
+    color:#222;
+}
+.con-title{
+    font-size: 30rpx;
+}
+.app-panel {
+    font-size: 25rpx;
+}
+
+.app-panel .tip {
+    text-align: center;
+    color: #ccc;
+}
+
+.app-panel .panel {
+    margin: 15rpx 0;
+}
+
+.app-btns .btn {
+    margin: 30rpx 0;
+}
+.app-btns .btn.primary{
+    background-color: #0041d1;
+    color:#fff;
+}

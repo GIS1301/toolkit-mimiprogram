@@ -1,26 +1,9 @@
-.app {
-    padding: 15rpx 30rpx;
-}
 .app-con{
-    margin:50rpx 0;
+    padding:30rpx 15rpx;
 }
-.app-panel {
-    font-size: 16px;
+.app-con .nav{
+    font-size:30rpx;
 }
-
-.app-panel .tip {
-    text-align: center;
-    color: #ccc;
-}
-
-.app-panel .panel {
-    margin: 15rpx 0;
-}
-
-.app-btns .btn {
-    margin: 30rpx 0;
-}
-.app-btns .btn.primary{
-    background-color: #0041d1;
-    color:#fff;
+.nav.disable{
+    color:#ccc;
 }

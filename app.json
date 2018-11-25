@@ -1,7 +1,8 @@
 {
     "pages": [
         "pages/index/index",
-        "pages/map/index"
+        "pages/map/index",
+        "pages/distance/index"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -14,8 +15,8 @@
             {
                 "pagePath": "pages/index/index",
                 "text": "首页",
-                "iconPath":"static/images/home.png",
-                "selectedIconPath":"static/images/s-home.png"
+                "iconPath": "static/images/home.png",
+                "selectedIconPath": "static/images/s-home.png"
             },
             {
                 "pagePath": "pages/map/index",
