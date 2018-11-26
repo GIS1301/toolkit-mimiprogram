@@ -1,9 +1,9 @@
 <view class="app">
     <view class="app-title">GIS工具助手，提高工作效率</view>
-    <view class="app-con card">
-        <navigator class="nav" url="/pages/distance/index">已知A、B点坐标，计算距离和方位角</navigator>
-    </view>
-     <view class="app-con card">
-        <text class="nav disable">已知A点坐标，距离和方位角，求B点坐标</text>
-    </view>
+
+    <block wx:for="{{funcList}}" wx:for-item="func" wx:key="index">
+        <view class="app-con card">
+            <navigator class="nav" url="{{func.path}}">{{func.title}}</navigator>
+        </view>
+    </block>
 </view>

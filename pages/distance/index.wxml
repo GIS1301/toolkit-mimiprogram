@@ -18,11 +18,11 @@
         <view class="tip">长按复制</view>
         <view class="panel">
             <label>距离：</label>
-            <text bindlongtap="copy2ClipBoard" data-copy="{{dis}}">{{dis}}m</text>
+            <text bindlongpress="copy2ClipBoard" data-copy="{{dis}}">{{dis}}m</text>
         </view>
         <view class="panel">
             <label>方位角：</label>
-            <text bindlongtap="copy2ClipBoard" data-copy="{{copyAngle}}">{{uiAngle}}</text>
+            <text bindlongpress="copy2ClipBoard" data-copy="{{copyAngle}}">{{uiAngle}}</text>
         </view>
     </view>
 </view>

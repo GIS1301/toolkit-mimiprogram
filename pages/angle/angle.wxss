@@ -1,0 +1,8 @@
+.yan--input{
+    margin:15rpx 0;
+    padding:10rpx 15rpx;
+    border-bottom:1px solid #ccc;
+}
+.con-title{
+    margin:0 0 0 20rpx;   
+}

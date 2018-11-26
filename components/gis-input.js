@@ -6,7 +6,7 @@ Component({
     properties: {
         propType: {
             type: String,
-            value: "lon", // 经度
+            value:"lon",
         },
         propDeg: {
             type: Object,
@@ -25,6 +25,10 @@ Component({
                     sec,
                 });
             }
+        },
+        propHideLabel:{
+            type:Boolean,
+            value:false,
         }
     },
 
@@ -33,6 +37,7 @@ Component({
      */
     data: {
         isLon: true,
+        isHideLabel:false,
         labelText: "经度",
         // input
         deg: "", // 度
@@ -98,7 +103,9 @@ Component({
     },
     lifetimes: {
         attached() {
-            let isLon = this.properties.propType === "lon";
+            let coordType = this.properties.propType;
+            let isHideLabel=this.properties.propHideLabel;
+            let isLon = coordType === "lon";
             let {
                 deg,
                 min,
@@ -106,6 +113,7 @@ Component({
             } = this.properties.propDeg;
             this.setData({
                 isLon: isLon,
+                isHideLabel: isHideLabel,
                 labelText: isLon ? "经度" : "纬度",
                 deg,
                 min,

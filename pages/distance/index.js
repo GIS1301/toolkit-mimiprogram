@@ -3,6 +3,7 @@
 const app = getApp()
 
 const Tool = require("../../tools/calcDisAndAngle.js");
+const {d2dms,dms2d}=require("../../tools/formatAngle.js");
 
 const DEFAULT_DEG=function () {
     return {
@@ -32,26 +33,6 @@ Page({
             data: txt,
         })
     },
-    // 转换度-》度分秒
-    d2dms(d) {
-        let deg = d | 0;
-        let temp = (d - deg) * 60;
-        let min = temp | 0;
-        let sec = (temp - min) * 60;
-        return {
-            deg,
-            min,
-            sec,
-        };
-    },
-    // 转换度分秒-》度
-    dms2d({
-        deg,
-        min,
-        sec
-    }) {
-        return (+deg) + (+min) / 60 + (+sec) / 3600;
-    },
     // 获取坐标
     setCoords(ev) {
         let {
@@ -76,10 +57,10 @@ Page({
         } = this.data;
 
         // 转换成度
-        lonA = this.dms2d(lonA);
-        latA = this.dms2d(latA);
-        lonB = this.dms2d(lonB);
-        latB = this.dms2d(latB);
+        lonA = dms2d(lonA);
+        latA = dms2d(latA);
+        lonB = dms2d(lonB);
+        latB = dms2d(latB);
 
         if (!this.isNumber(lonA) || !this.isNumber(latA) || !this.isNumber(lonB) || !this.isNumber(latB)) {
             return wx.showModal({
@@ -102,7 +83,7 @@ Page({
         let dis = Tool.getDistanceBetweenTwoPoints(lonA, latA, lonB, latB);
         let copyAngle = angle;
         // 转成度分秒
-        angle=this.d2dms(angle);
+        angle=d2dms(angle);
         angle.sec = (+angle.sec).toFixed(5);
         let uiAngle=`${angle.deg}°${angle.min}'${angle.sec}''`;
 
@@ -149,12 +130,12 @@ Page({
         wx.setStorage({
             key: "yan-pos",
             data: [{
-                    latitude: this.dms2d(this.data.latA),
-                    longitude:this.dms2d( this.data.lonA)
+                    latitude: dms2d(this.data.latA),
+                    longitude:dms2d( this.data.lonA)
                 },
                 {
-                    latitude: this.dms2d(this.data.latB),
-                    longitude: this.dms2d(this.data.lonB)
+                    latitude: dms2d(this.data.latB),
+                    longitude: dms2d(this.data.lonB)
                 }
             ]
         })

@@ -1,0 +1,24 @@
+<view class='app'>
+    <view class="app-title">经纬度格式转换</view>
+    <view class="app-con card">
+        <switch checked bindchange="formatChange" />
+        <block wx:if="{{isDegFormat}}">
+            <h3 class="con-title">转为度分秒</h3>
+            <input type="digit" value="{{deg}}" bindinput='getDegVal' class="yan--input" />
+        </block>
+        <block wx:else>
+            <h3 class="con-title">转为度</h3>
+            <gis-input prop-hide-label="{{true}}" prop-deg="{{dms}}" bind:set-coords="setCoords" />
+        </block>
+    </view>
+    <view class="app-btns">
+        <button class="btn primary" bindtap='convertAngleFormat'>转换</button>
+        <button class="btn" bindtap='resetCalcRes'>重置</button>
+    </view>
+    <view class="app-panel card" wx:if="{{isShowResult}}">
+        <view class="tip">长按复制</view>
+        <view class="panel">
+            <text bindlongpress="copy2ClipBoard">{{uiAngle}}</text>
+        </view>
+    </view>
+</view>

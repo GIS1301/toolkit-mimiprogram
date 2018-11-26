@@ -2,7 +2,8 @@
     "pages": [
         "pages/index/index",
         "pages/map/index",
-        "pages/distance/index"
+        "pages/distance/index",
+        "pages/angle/angle"
     ],
     "window": {
         "backgroundTextStyle": "light",

@@ -1,5 +1,5 @@
 <view class="con-input">
-    <label class="label--tilte">{{labelText}}</label>
+    <label class="label--tilte" wx:if="{{!isHideLabel}}">{{labelText}}</label>
     <input type="digit" class="input--num" value="{{deg}}" data-type="deg" bindinput="changeVal" bindblur='postMsgToParent' />
     <label class="label--txt">°</label>
     <input type="number" class="input--num" value="{{min}}" data-type="min" bindinput="changeVal" bindblur='postMsgToParent' />

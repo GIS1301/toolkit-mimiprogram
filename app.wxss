@@ -1,19 +1,22 @@
 /**app.wxss**/
-page{
+
+page {
     background-color: rgba(231, 231, 231, 0.952);
     height: 100%;
 }
+
 .container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box;
-} 
-.card{
-    margin:20rpx 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 200rpx 0;
+    box-sizing: border-box;
+}
+
+.card {
+    margin: 20rpx 0;
     padding: 10rpx 15rpx;
     background-color: #fff;
     border-radius: 5rpx;
@@ -22,14 +25,17 @@ page{
 .app {
     padding: 15rpx 20rpx;
 }
-.app-title{
+
+.app-title {
     font-size: 30rpx;
     text-align: center;
-    color:#222;
+    color: #222;
 }
-.con-title{
+
+.con-title {
     font-size: 30rpx;
 }
+
 .app-panel {
     font-size: 25rpx;
 }
@@ -41,12 +47,28 @@ page{
 
 .app-panel .panel {
     margin: 15rpx 0;
+    font-size: 30rpx;
 }
 
 .app-btns .btn {
     margin: 30rpx 0;
 }
-.app-btns .btn.primary{
+
+.app-btns .btn.primary {
     background-color: #0041d1;
-    color:#fff;
+    color: #fff;
+}
+
+/*swtich整体大小及背景色*/
+.wx-switch-input{
+    background: #0041d1 !important;
+    border: #0041d1 !important;
+}
+/*白色样式（false的样式）*/
+.wx-switch-input::before {
+    
+}
+/*绿色样式（true的样式）*/
+.wx-switch-input::after {
+    
 }

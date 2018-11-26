@@ -4,7 +4,20 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        funcList:[
+            {
+                title:"已知A、B点坐标，计算距离和方位角",
+                path: "/pages/distance/index",
+            },
+            // { // TODO
+            //     title: "已知A点坐标，距离和方位角，求B点坐标",
+            //     path: "",
+            // },
+            {
+                title: "度分秒格式转换",
+                path: "/pages/angle/angle",
+            },
+        ],
     },
     /**
      * 生命周期函数--监听页面加载
