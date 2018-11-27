@@ -1,12 +1,19 @@
 <view class='app'>
     <view class="app-title">计算两点间距离和方位角</view>
     <view class="app-con card">
-        <h3 class="con-title">坐标A</h3>
+        <view class="con-top">
+            <h3 class="con-title">坐标A</h3>
+            <image class="con-locate" src="../../static/images/locate.svg" data-key="A" bindtap='chooseLocation' />
+        </view>
+
         <gis-input prop-type="lon" prop-deg="{{lonA}}" data-key="lonA" bind:set-coords="setCoords" />
         <gis-input prop-type="lat" prop-deg="{{latA}}" data-key="latA" bind:set-coords="setCoords" />
     </view>
     <view class="app-con card">
-        <h3 class="con-title">坐标B</h3>
+        <view class="con-top">
+            <h3 class="con-title">坐标B</h3>
+            <image class="con-locate" src="../../static/images/locate.svg" data-key="B" bindtap='chooseLocation' />
+        </view>
         <gis-input prop-type="lon" prop-deg="{{lonB}}" data-key="lonB" bind:set-coords="setCoords" />
         <gis-input prop-type="lat" prop-deg="{{latB}}" data-key="latB" bind:set-coords="setCoords" />
     </view>

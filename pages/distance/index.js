@@ -26,6 +26,25 @@ Page({
         uiAngle: DEFAULT_ANG,
         copyAngle:'0',
     },
+    chooseLocation({target}) {
+        let key = target.dataset.key;
+        let mp=this;
+        wx.chooseLocation({
+            success({name,address,longitude,latitude}) {
+                mp.setData({
+                    [`lon${key}`]:{
+                        ...d2dms(longitude),
+                    },
+                    [`lat${key}`]: {
+                        ...d2dms(latitude),
+                    },
+                });
+            },
+            fail() {
+
+            }
+        });
+    },
     // 复制
     copy2ClipBoard({target}) {
         let txt=(target.dataset.copy)+"";
