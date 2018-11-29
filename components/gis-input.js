@@ -77,11 +77,11 @@ Component({
                 },
                 "min": function(v) {
                     let range = 60;
-                    return v <= range;
+                    return v < range;
                 },
                 "sec": function(v) {
                     let range = 60;
-                    return v <= range;
+                    return v < range;
                 }
             };
             let fn = mode[type];
